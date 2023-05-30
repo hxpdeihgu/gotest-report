@@ -118,7 +118,7 @@ func initRootCommand() (*cobra.Command, *templateData, *cmdFlags) {
 	flags := &cmdFlags{}
 	tmplData := &templateData{}
 	rootCmd := &cobra.Command{
-		Use:  "go-test-report",
+		Use:  "gotest-report",
 		Long: "Captures go test output via stdin and parses it into a single self-contained html file.",
 		RunE: func(cmd *cobra.Command, args []string) (e error) {
 			startTime := time.Now()
@@ -185,7 +185,7 @@ func initRootCommand() (*cobra.Command, *templateData, *cmdFlags) {
 	rootCmd.PersistentFlags().StringVarP(&flags.titleFlag,
 		"title",
 		"t",
-		"go-test-report",
+		"gotest-report",
 		"the title text shown in the test report")
 	rootCmd.PersistentFlags().StringVarP(&flags.sizeFlag,
 		"size",
